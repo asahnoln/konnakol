@@ -5,6 +5,9 @@
 	import MisraChapu from '$lib/akcharam/thalams/misraChapu';
 	import Roopaga from '$lib/akcharam/thalams/roopaga';
 	import type { Thalam } from '$lib/akcharam/thalams/thalam';
+	import Modal from '$lib/Modal.svelte';
+
+	let modal: Modal;
 
 	let result = '';
 	let song: string;
@@ -25,12 +28,21 @@
 	const a = new Akcharam();
 	function highlight() {
 		thalam.g = gathi;
-		result = a.hlHtml(song, thalam).replaceAll('\n', '<br>');
+		result = a.hlHtml(song, thalam);
 	}
 </script>
 
+<Modal bind:this={modal} />
+
 <section class="section">
 	<div class="container">
+		<h1 class="title is-1">Konnakkol Akcharam Highlighter</h1>
+		<div class="field">
+			<div class="control">
+				<button class="button is-warning" on:click={() => modal.open()}>How to use it?</button>
+			</div>
+		</div>
+
 		<div class="field">
 			<label class="label" for="thalam">Thalam</label>
 			<div class="control">
@@ -72,8 +84,7 @@
 			</div>
 		</div>
 
-		<div class="result">
-			{@html result}
-		</div>
+		<pre class="result">
+{@html result}</pre>
 	</div>
 </section>
