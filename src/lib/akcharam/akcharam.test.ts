@@ -69,4 +69,13 @@ describe('akcharam', () => {
 			'|1|(Tha) Ki |2|(Ta) Tha Ka Dhi |3|(Mi) Tha Ki Ta |4|(Tha) Ka Dhi Mi'
 		);
 	});
+
+	it('highlights in HTML', () => {
+		const a = new Akcharam();
+		const rt = new MisraChapu();
+		const song = 'Tha Ki Ta Tha Ka Dhi Mi Tha Ki Ta Tha Ka Dhi Mi';
+		expect(a.hlHtml(song, rt)).toBe(
+			'<em>Tha<sup>1</sup></em> Ki <em>Ta<sup>2</sup></em> Tha Ka Dhi <em>Mi<sup>3</sup></em> Tha Ki Ta <em>Tha<sup>4</sup></em> Ka Dhi Mi'
+		);
+	});
 });
