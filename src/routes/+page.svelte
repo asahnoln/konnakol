@@ -80,7 +80,7 @@
 		</div>
 		<div class="field">
 			<div class="control">
-				<button class="button" on:click={highlight}>Highlight Akcharams</button>
+				<button class="button is-success" on:click={highlight}>Highlight Akcharams</button>
 			</div>
 		</div>
 
