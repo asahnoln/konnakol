@@ -2,7 +2,7 @@ export class Base implements Thalam {
 	g = 4;
 	maxStep = 8;
 
-	gathi(): number {
+	gathi(step: number): number {
 		return this.g;
 	}
 	nextStep(step: number): number {
