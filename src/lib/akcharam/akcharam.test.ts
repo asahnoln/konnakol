@@ -75,7 +75,14 @@ describe('akcharam', () => {
 		const rt = new MisraChapu();
 		const song = 'Tha Ki Ta Tha Ka Dhi Mi Tha Ki Ta Tha Ka Dhi Mi';
 		expect(a.hlHtml(song, rt)).toBe(
-			'<em>Tha<sup>1</sup></em> Ki <em>Ta<sup>2</sup></em> Tha Ka Dhi <em>Mi<sup>3</sup></em> Tha Ki Ta <em>Tha<sup>4</sup></em> Ka Dhi Mi'
+			'<strong>Tha<sup>1</sup></strong> Ki <strong>Ta<sup>2</sup></strong> Tha Ka Dhi <strong>Mi<sup>3</sup></strong> Tha Ki Ta <strong>Tha<sup>4</sup></strong> Ka Dhi Mi'
 		);
+	});
+
+	it('highlights with punctuation', () => {
+		const a = new Akcharam();
+		const at = new Adhi();
+		const song = 'Thaam , - .';
+		expect(a.hl(song, at)).toBe('|1|(Thaam) , - .');
 	});
 });
