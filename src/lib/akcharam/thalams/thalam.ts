@@ -15,6 +15,7 @@ export class Base implements Thalam {
 }
 
 export interface Thalam {
+	g: number;
 	gathi(step: number): number;
 	nextStep(step: number): number;
 }

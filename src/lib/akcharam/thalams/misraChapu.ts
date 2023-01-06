@@ -5,10 +5,10 @@ class MisraChapu extends Base {
 
 	gathi(step: number): number {
 		if (step == 1) {
-			return 2;
+			return this.g / 2;
 		}
 
-		return 4;
+		return this.g;
 	}
 }
 

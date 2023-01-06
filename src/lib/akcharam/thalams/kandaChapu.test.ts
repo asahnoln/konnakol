@@ -11,4 +11,16 @@ describe('Khanda chapu', () => {
 		const kc = new KandaChapu();
 		expect(kc.gathi(2)).toBe(2);
 	});
+
+	it('has 6 gathi', () => {
+		const kc = new KandaChapu();
+		kc.g = 6;
+		expect(kc.gathi(1)).toBe(6);
+	});
+
+	it('has 3 gathi on 2 beat', () => {
+		const kc = new KandaChapu();
+		kc.g = 6;
+		expect(kc.gathi(2)).toBe(3);
+	});
 });
