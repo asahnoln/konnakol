@@ -36,7 +36,7 @@
 
 <section class="section">
 	<div class="container">
-		<h1 class="title is-1">Konnakkol Akcharam Highlighter</h1>
+		<h1 class="title is-1">Konnakol Akcharam Highlighter</h1>
 		<div class="field">
 			<div class="control">
 				<button class="button is-warning" on:click={() => modal.open()}>How to use it?</button>
