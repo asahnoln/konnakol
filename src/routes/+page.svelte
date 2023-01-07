@@ -12,6 +12,26 @@
 
 	let result = '';
 	let song: string;
+	let example = `Thaam . . Ta Tha Ka Dhi Na
+
+Tha- -an- -gu
+Dhe- -en- -gu
+Tha- -an- -gu
+Ta Tha Ka Dhi Na
+
+Tha an gu
+Dhe en gu
+Tha an gu
+Ta Tha Ka Dhi Na
+
+Thangu . .
+Dheengu . . 
+Thaangu . .
+Ta Tha Ka Dhi Na Thaam .
+Ta Tha Ka Dhi Na Tha- -am
+Ta Tha Ka Dhi Na
+
+Tha`;
 	let thalam: Thalam;
 	let gathi: number;
 
@@ -96,7 +116,24 @@
 					</div>
 				</div>
 				<div class="field">
-					<label class="label" for="song">Composition</label>
+					<label class="label" for="song">Composition (1 non-spaced word = 1 matra)</label>
+					<div class="field">
+						<div class="control">
+							<button class="button is-warning is-small" on:click={() => (song = example)}>
+								<span class="icon">
+									<i class="fas fa-pencil" />
+								</span>
+								<span>Fill in an example</span></button
+							>
+							<button class="button is-danger is-small" on:click={() => (song = '')}>
+								<span class="icon">
+									<i class="fas fa-trash" />
+								</span>
+								<span>Clear</span>
+							</button>
+						</div>
+					</div>
+
 					<div class="control">
 						<textarea
 							class="textarea"
@@ -108,7 +145,12 @@
 				</div>
 				<div class="field">
 					<div class="control">
-						<button class="button is-success" on:click={highlight}>Highlight Akcharams</button>
+						<button class="button is-success" on:click={highlight}>
+							<span class="icon">
+								<i class="fas fa-marker" />
+							</span>
+							<span>Highlight Akcharams</span></button
+						>
 					</div>
 				</div>
 
@@ -135,16 +177,17 @@
 			</p>
 			<p>
 				Available on <a
-					class="icon-text"
 					target="_blank"
 					rel="noreferrer"
 					href="https://github.com/asahnoln/konnakol"
 				>
-					<span class="icon">
-						<i class="fas fa-brands fa-github-alt" />
-					</span>
-					<span>GitHub</span>
-				</a>.
+					<span class="icon-text">
+						<span class="icon">
+							<i class="fas fa-brands fa-github-alt" />
+						</span>
+						<span>GitHub</span>
+					</span></a
+				>.
 			</p>
 			<p>
 				If you like it, consider <a
