@@ -202,6 +202,16 @@ Tha`;
 					>.
 				</a>
 			</p>
+			<p>
+				<a rel="me" href="https://mastodon.social/@asahnoln">
+					<span class="icon-text">
+						<span class="icon">
+							<i class="fas fa-brands fa-mastodon" />
+						</span>
+						<span>Mastodon</span>
+					</span>
+				</a>
+			</p>
 		</div>
 	</div>
 </footer>
