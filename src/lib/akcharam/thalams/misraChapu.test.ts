@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import MisraChapu from './misraChapu';
 
-describe('Khanda chapu', () => {
+describe('Misra chapu', () => {
 	it('has 4 claps', () => {
 		const kc = new MisraChapu();
 		expect(kc.nextStep(4)).toBe(1);
