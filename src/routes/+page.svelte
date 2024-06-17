@@ -53,6 +53,11 @@ Tha`;
 	}
 </script>
 
+<svelte:head>
+  <title>Konnakol Akcharam Highlighter</title>
+  <meta name="description" content="Utilize the Konnakol Akcharam Highlighter to visualize hand strikes on solkattus accurately. This interactive tool helps in composing and highlighting rhythmic patterns according to various thalams and gathis, enhancing your understanding of Indian percussion. Developed by Arthur Aslanyan." />
+</svelte:head>
+
 <Modal bind:this={modal}><Help /></Modal>
 
 <section class="section">
